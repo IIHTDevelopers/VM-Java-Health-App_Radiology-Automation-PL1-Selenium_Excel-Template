@@ -1,35 +1,179 @@
 package pages;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class radiology_page extends StartupPage {
 
-	public By getPageBarFixedLocator(String navBarName) {
-		if (navBarName.equalsIgnoreCase("list requests")) {
-			navBarName = "ImagingRequisitionList";
-		} else if (navBarName.equalsIgnoreCase("list reports")) {
-			navBarName = "ImagingReportsList";
-		} else if (navBarName.equalsIgnoreCase("edit doctors")) {
-			navBarName = "EditDoctors";
-		} else if (navBarName.equalsIgnoreCase("ward billing")) {
-			navBarName = "InpatientList";
-		}
-		return By.xpath(" ");
+	public By getUsernameTextfieldLocator() {
+		return By.id("  ");
 	}
-	
+
+	public By getPasswordTextboxLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getSignInButtonLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getRadiologyLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getDoctorLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getPageBarFixedLocator(String navBarName) {
+		if (navBarName.equalsIgnoreCase("  ")) {
+			navBarName = "  ";
+		} else if (navBarName.equalsIgnoreCase("  ")) {
+			navBarName = "ImagingReportsList";
+		} else if (navBarName.equalsIgnoreCase("  ")) {
+			navBarName = "EditDoctors";
+		} else if (navBarName.equalsIgnoreCase("  ")) {
+			navBarName = "  ";
+		}
+		return By.xpath("  ");
+	}
+
+	public By getAnchorTagLocatorByText(String anchorTagName) {
+		return By.xpath("  ");
+	}
+
 	public By getButtonLocatorsBytext(String buttonName) {
-		return By.xpath(" ");
+		return By.xpath("  ");
+	}
+
+	public By calendarFromDropdown() {
+		return By.xpath("  ");
+	}
+
+	public By calendarToDropdown() {
+		return By.xpath("  ");
+	}
+
+	public By getOkButtonLocator() {
+		return By.xpath("  ");
+	}
+
+	public By searchBarId() {
+		return By.id("  ");
+	}
+
+	public By searchBarIdAtDoctorModule() {
+		return By.xpath("  ");
+	}
+
+	public By getDateRangeButton() {
+		return By.cssSelector("  ");
+	}
+
+	public By getFilterDropdownLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getStarIconLocator() {
+		return By.xpath("  ");
+	}
+
+	public By favouriteOrStarIcon() {
+		return By.xpath("  ");
+	}
+
+	public By getActionColumnButton(String patientName, String actionName) {
+		return By.xpath("  ");
+	}
+
+	public By getFilmTypeErrorMessage() {
+		return By.xpath("  ");
+	}
+
+	public By getFilmTypeInputField() {
+		return By.cssSelector("  ");
+	}
+
+	public By getQuantityInputField() {
+		return By.xpath("  ");
+	}
+
+	public By getPopUpMessageText(String msgStatus, String messageText) {
+		return By.xpath("  ");
+	}
+
+	public By getAddReportHeading() {
+		return By.xpath("  ");
+	}
+
+	public By getSaveButtonLocator() {
+		return By.cssSelector("  ");
+	}
+
+	public By getTextEditorLocator() {
+		return By.xpath("  ");
+	}
+
+	public By getBodyTextLocator() {
+		return By.cssSelector("  ");
+	}
+
+	public By popupCloseButton() {
+		return By.cssSelector("  ");
+	}
+
+	public By getImagingName() {
+		return By.xpath("  ");
+	}
+
+	public By getFirstLabIcon() {
+		return By.cssSelector("  ");
+	}
+
+	public By getOrderFilterDropdown() {
+		return By.xpath("  ");
+	}
+
+	public By getInputFieldByPlaceholder(String placeholder) {
+		return By.xpath("  ");
+	}
+
+	public By getListElementWithText(String listElementText) {
+		return By.xpath("  ");
+	}
+
+	public By getCurrentPage() {
+		return By.xpath("  ");
+	}
+
+	public By getFirstPatientName() {
+		return By.xpath("  ");
+	}
+
+	public By getOrderSection() {
+		return By.xpath("  ");
+	}
+
+	public By getSelectDateRangeDropDown() {
+		return By.xpath("  ");
+	}
+
+	public By getActualRequestedOnDates() {
+		return By.xpath("  ");
+	}
+
+	public By getImagingTypeName() {
+		return By.xpath("  ");
+	}
+
+	public By wardBillingViewDetailsbutton() {
+		return By.cssSelector("  ");
+	}
+
+	public By wardBillingModal() {
+		return By.xpath("  ");
 	}
 
 	public radiology_page(WebDriver driver) {
