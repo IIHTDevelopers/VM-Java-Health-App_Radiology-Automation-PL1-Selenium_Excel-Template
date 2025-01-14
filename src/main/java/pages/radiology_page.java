@@ -497,44 +497,4 @@ public class radiology_page extends StartupPage {
 		return false;
 		}
 
-	/**
-	 * @Test13 and @Test14 about this method verifyImageOrderCreation() Verifies the
-	 *         creation of an imaging order for a specific patient in the In Patient
-	 *         Department.
-	 *
-	 * @param radiologyExpectedData        - A map containing the expected data for
-	 *                                     radiology, including the patient name.
-	 * @param doYouWantToCancelTheNewOrder - A boolean indicating whether to cancel
-	 *                                     the new order.
-	 * @return String - Returns the actual success message if the order is created
-	 *         successfully, otherwise returns "true" or "false" based on the cancel
-	 *         action verification.
-	 * @throws Exception - If there is an issue locating or interacting with
-	 *                   elements.
-	 */
-	public String verifyImageOrderCreation(Map<String, String> radiologyExpectedData,
-			boolean doYouWantToCancelTheNewOrder) {
-		return null;
-	}
-
-	/**
-	 * @Test15.2 about this method verifyScanDonePopupAndRequiredFieldMessage()
-	 * 
-	 * @param patientName - The name of the patient for whom the action is to be
-	 *                    performed.
-	 * @param actionName  - The name of the action button to be clicked (e.g., "scan
-	 *                    done").
-	 * @description : This method verifies that the "Scan Done" popup opens for the
-	 *              specified patient and that the required field message appears on
-	 *              the film type field when the "Done" button is clicked without
-	 *              entering any details.
-	 * @return : String - The error message text displayed on the film type field if
-	 *         it is required.
-	 * @throws : Exception - if there is an issue locating or interacting with
-	 *           elements.
-	 * @author : YAKSHA
-	 */
-	public String verifyScanDonePopupAndRequiredFieldMessage(String patientName, String actionName) {
-		return null;
-		}
 }
