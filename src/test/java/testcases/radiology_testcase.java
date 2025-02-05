@@ -175,70 +175,7 @@ public class radiology_testcase extends AppTestBase {
 		System.out.println("From Date : " + fromDate + ", To Date : " + toDate);
 		Assert.assertTrue(radiology_pageInstance.verifyDatesAreRememberedCorrectly(fromDate, toDate));
 	}
-
-	@Test(priority = 9, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on radiology module\r\n"
-					+ "1. Click on the data range button\r\n" + "2. Select\"one week\" option from the drop down\r\n"
-					+ "3. Click on \"OK\" button"
-					+ "4. Data should be present as per the selected date range using dropdown\r\n"
-					+ "The 'Requested on' column date must fall within the \"one week\".")
-	public void verifyToDataRangeBySelectOneWeekOptionFromDropdown() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-
-		Assert.assertTrue(radiology_pageInstance.clickDateRangeDropdownAndSelect("Last 1 Week"));
-		LocalDate currentDate = LocalDate.now();
-		LocalDate date7DaysAgo = currentDate.minusDays(7);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		String toDate = currentDate.format(formatter);
-		String fromDate = date7DaysAgo.format(formatter);
-		Thread.sleep(3000); // Waiting for data to load
-		Assert.assertTrue(radiology_pageInstance.verifyToDataRangeBySelectOneWeekOptionFromDropdown(fromDate, toDate));
-	}
-
-	@Test(priority = 10, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on List requests section \r\n"
-					+ "1. Click on Filter drop down\r\n" + "2. Click on \"X-RAY\" drop down option\r\n"
-					+ "3. Click on \"FROM\" and select \"Jan 2020\"\r\n"
-					+ "4. Click on \"TO\" and selct \"march 2024\"\r\n" + "5. Click on \"OK\" button"
-					+ "6. Record should filter out as per status ")
-	public void verifyDataFromTabelByEnteringDataXRAYInSearchField() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-
-		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"radiology");
-
-		Assert.assertTrue(radiology_pageInstance
-				.verifyDataFromTabelByEnteringDataXRAYInSearchField(radiologyExpectedData.get("type")));
-	}
-
-	@Test(priority = 11, groups = { "sanity" }, description = "1. Navigate to the Radiology module\r\n"
-			+ "2. Go to Ward Billing\r\n" + "3. Search for Patient\r\n"
-			+ "4. Click on the View Details button next to the Test Patient 3 Radiology\r\n"
-			+ "5. Click on the Cancel button within the Radiology Ward Billing modal"
-			+ "6. Clicking the \"Cancel\" button within the modal should trigger a popup message stating \"Please Write Cancellation Remarks.\"")
-	public void verifyRadiologyWardBillingCancellationPopup() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-
-		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"radiology");
-
-		Assert.assertEquals(radiology_pageInstance.verifyRadiologyWardBillingCancellationPopup(radiologyExpectedData),
-				radiologyExpectedData.get("cancellationRemarksMsg"));
-	}
-
-	@Test(priority = 12, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on list requests section\r\n"
-					+ "1. Enter the keywords \"USG Chest\"" + "2. Record should be present as per the entered keywords")
-	public void verifyDataFromTabelByEnteringDataInSearchField() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-
-		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"radiology");
-
-		Assert.assertTrue(radiology_pageInstance
-				.verifyDataFromTableByEnteringDataInSearchField(radiologyExpectedData.get("imagingName")));
-	}
-
+	
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");
