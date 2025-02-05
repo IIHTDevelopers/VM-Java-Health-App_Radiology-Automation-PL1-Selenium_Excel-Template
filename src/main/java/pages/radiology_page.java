@@ -195,7 +195,7 @@ public class radiology_page extends StartupPage {
 	}
 
 	/**
-	 * @Test1.2 and @Test15.1 about this method scrollDownAndClickRadiologyTab()
+	 * @Test1.2 about this method scrollDownAndClickRadiologyTab()
 	 * 
 	 * @param : null
 	 * @description : verify the radiology tab, scroll to it, and click it
@@ -415,86 +415,5 @@ public class radiology_page extends StartupPage {
 				return false;
 	}
 
-	/**
-	 * @Test9.1 about this method clickDateRangeDropdownAndSelect()
-	 * 
-	 * @param : String - Text of the value to select from dropdown
-	 * @description : This method clicks on the date range button and selects a
-	 *              value by its text
-	 * @return : boolean - true if successfully selected the intended value and
-	 *         false if the value is not selected
-	 * @throws : Exception - if there is an issue finding the dropdown or its values
-	 * @author : YAKSHA
-	 */
-	public boolean clickDateRangeDropdownAndSelect(String valueToSelect) throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test9.2 about this method
-	 * verifyToDataRangeBySelectOneWeekOptionFromDropdown()
-	 * 
-	 * @param : String, String - from date - to date
-	 * @description : This method verifies whether the "Requested On" dates for all
-	 *              the result requisitions are within the specified date range.
-	 * @return : boolean - true if the actual dates fall within the specified date
-	 *         and false if they don't.
-	 * @throws : Exception - if there is an issue finding the actual data
-	 * @author : YAKSHA
-	 */
-
-	public boolean verifyToDataRangeBySelectOneWeekOptionFromDropdown(String fromDate, String toDate) throws Exception {
-
-		return false;
-		}
-
-	/**
-	 * @Test10 about this method
-	 *         verifyDataFromTabelByEnteringDataXRAYInSearchField() Verifies that
-	 *         all records in the table match the entered text in the dropdown.
-	 * 
-	 * @param dropDownValue - The text to select from the dropdown.
-	 * @return boolean - Returns true if all records match the selected text,
-	 *         otherwise false.
-	 * @throws Exception - If there is an issue locating or interacting with
-	 *                   elements.
-	 */
-	public boolean verifyDataFromTabelByEnteringDataXRAYInSearchField(String dropDownValue) throws Exception {
-		return false;
-		}
-
-	/**
-	 * @Test11 about this method verifyRadiologyWardBillingCancellationPopup()
-	 * 
-	 * @param radiologyExpectedData - A map containing the expected data for the
-	 *                              radiology test, such as patient name and
-	 *                              expected cancellation remarks message.
-	 * @description This method verifies that the Radiology Ward Billing modal opens
-	 *              upon searching for a patient and clicking on the view details
-	 *              button. It then clicks the cancel button and verifies that the
-	 *              appropriate popup message "Please Write Cancellation Remarks"
-	 *              appears.
-	 * @return String - The actual failed remarks message displayed in the popup.
-	 * @throws Exception - If there is an issue locating or interacting with
-	 *                   elements.
-	 * @autor YAKSHA
-	 */
-	public String verifyRadiologyWardBillingCancellationPopup(Map<String, String> radiologyExpectedData) {
-		return null;
-	}
-
-	/**
-	 * @Test12 about this method verifyToolTipText() Verifies that all records in
-	 *         the table match the entered text in the search field.
-	 * 
-	 * @param textToEnter - The text to enter in the search field.
-	 * @return boolean - Returns true if all records match the entered text,
-	 *         otherwise false.
-	 * @throws Exception - If there is an issue locating or interacting with
-	 *                   elements.
-	 */
-	public boolean verifyDataFromTableByEnteringDataInSearchField(String textToEnter) throws Exception {
-		return false;
-		}
 
 }
