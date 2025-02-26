@@ -12,6 +12,23 @@ import testBase.UserActions;
 public class LocatorsFactory extends UserActions {
 
 	UserActions userActions = new UserActions(driver);
+	//Radiology Locators
+	public By getPageBarFixedLocator(String navBarName) {
+		if (navBarName.equalsIgnoreCase("list requests")) {
+			navBarName = "ImagingRequisitionList";
+		} else if (navBarName.equalsIgnoreCase("list reports")) {
+			navBarName = "ImagingReportsList";
+		} else if (navBarName.equalsIgnoreCase("edit doctors")) {
+			navBarName = "EditDoctors";
+		} else if (navBarName.equalsIgnoreCase("ward billing")) {
+			navBarName = "InpatientList";
+		}
+		return By.xpath("//ul[@class='page-breadcrumb']/li/a[@href='#/Radiology/" + navBarName + "']");
+	}
+	
+	public By getButtonLocatorsBytext(String buttonName) {
+		return By.xpath("//button[contains(text(),'" + buttonName + "')]");
+	}
 
 	// element of health application
 
