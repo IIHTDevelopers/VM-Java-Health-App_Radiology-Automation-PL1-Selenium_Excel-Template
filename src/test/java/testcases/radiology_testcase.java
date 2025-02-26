@@ -61,14 +61,15 @@ public class radiology_testcase extends AppTestBase {
 			+ "1. Click on the radiology Module drop-down arrow")
 	public void verifyRadiologySubModules() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
+		locatorsFactoryInstance = new LocatorsFactory(driver);
 		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				radiology_pageInstance.getPageBarFixedLocator("List Requests")));
+				locatorsFactoryInstance.getPageBarFixedLocator("List Requests")));
 		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				radiology_pageInstance.getPageBarFixedLocator("List Reports")));
+				locatorsFactoryInstance.getPageBarFixedLocator("List Reports")));
 		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				radiology_pageInstance.getPageBarFixedLocator("Edit Doctors")));
+				locatorsFactoryInstance.getPageBarFixedLocator("Edit Doctors")));
 		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				radiology_pageInstance.getPageBarFixedLocator("Ward Billing")));
+				locatorsFactoryInstance.getPageBarFixedLocator("Ward Billing")));
 	}
 
 	@Test(priority = 3, groups = { "sanity" }, description = "1. Login in the healthapp application\r\n"
@@ -87,21 +88,22 @@ public class radiology_testcase extends AppTestBase {
 					+ "1. Click on the radiology module drop-down arrow \r\n" + "2. Click on list request section")
 	public void verifyListRequestsComponents() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
+		locatorsFactoryInstance = new LocatorsFactory(driver);
 		LocalDate currentDate = LocalDate.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		String toDate = currentDate.format(formatter);
 		Thread.sleep(3000); // Waiting for data to load
 		radiology_pageInstance.applyDateFilter("01-01-2023", toDate);
 		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(radiology_pageInstance.getButtonLocatorsBytext("OK")));
+				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("OK")));
 		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(radiology_pageInstance.getButtonLocatorsBytext("First")));
+				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("First")));
 		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				radiology_pageInstance.getButtonLocatorsBytext("Previous")));
+				locatorsFactoryInstance.getButtonLocatorsBytext("Previous")));
 		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(radiology_pageInstance.getButtonLocatorsBytext("Next")));
+				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("Next")));
 		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(radiology_pageInstance.getButtonLocatorsBytext("Last")));
+				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("Last")));
 		Assert.assertTrue(radiology_pageInstance.verifySearchBarIsDisplayed());
 		Assert.assertTrue(radiology_pageInstance.verifyDateRangeButtonIsDisplayed());
 		Assert.assertTrue(radiology_pageInstance.verifyFilterDropdownIsDisplayed());
@@ -116,21 +118,22 @@ public class radiology_testcase extends AppTestBase {
 					+ "3. Click on Ward Billing\r\n" + "4. Click on List Requests")
 	public void verifyNavigationToAnotherSubModuleAfterOpeningTheListRequestsSection() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
+		locatorsFactoryInstance = new LocatorsFactory(driver);
 		Assert.assertTrue(
 				radiology_pageInstance
-						.verifySelectedTabIsActiveOrNot(radiology_pageInstance.getPageBarFixedLocator("List Reports")),
+						.verifySelectedTabIsActiveOrNot(locatorsFactoryInstance.getPageBarFixedLocator("List Reports")),
 				"List Reports page is not active");
 		Assert.assertTrue(
 				radiology_pageInstance
-						.verifySelectedTabIsActiveOrNot(radiology_pageInstance.getPageBarFixedLocator("Edit Doctors")),
+						.verifySelectedTabIsActiveOrNot(locatorsFactoryInstance.getPageBarFixedLocator("Edit Doctors")),
 				"Edit Doctors page is not active");
 		Assert.assertTrue(
 				radiology_pageInstance
-						.verifySelectedTabIsActiveOrNot(radiology_pageInstance.getPageBarFixedLocator("Ward Billing")),
+						.verifySelectedTabIsActiveOrNot(locatorsFactoryInstance.getPageBarFixedLocator("Ward Billing")),
 				"Ward Billing page is not active");
 		Assert.assertTrue(
 				radiology_pageInstance
-						.verifySelectedTabIsActiveOrNot(radiology_pageInstance.getPageBarFixedLocator("List Requests")),
+						.verifySelectedTabIsActiveOrNot(locatorsFactoryInstance.getPageBarFixedLocator("List Requests")),
 				"List Requests page is not active");
 	}
 
