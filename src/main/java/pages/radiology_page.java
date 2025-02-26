@@ -3,177 +3,64 @@ package pages;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class radiology_page extends StartupPage {
 
+//	TC-1&2 Locator
 	public By getUsernameTextfieldLocator() {
-		return By.id("  ");
+		return null;
 	}
-
 	public By getPasswordTextboxLocator() {
-		return By.xpath("  ");
+		return null;
 	}
-
 	public By getSignInButtonLocator() {
-		return By.xpath("  ");
+		return null;
 	}
-
 	public By getRadiologyLocator() {
-		return By.xpath("  ");
+		return null;
 	}
-
-	public By getDoctorLocator() {
-		return By.xpath("  ");
-	}
-
+//	TC-3 Locator
 	public By getPageBarFixedLocator(String navBarName) {
-		if (navBarName.equalsIgnoreCase("  ")) {
-			navBarName = "  ";
-		} else if (navBarName.equalsIgnoreCase("  ")) {
-			navBarName = "ImagingReportsList";
-		} else if (navBarName.equalsIgnoreCase("  ")) {
-			navBarName = "EditDoctors";
-		} else if (navBarName.equalsIgnoreCase("  ")) {
-			navBarName = "  ";
-		}
-		return By.xpath("  ");
+		return null;
 	}
-
-	public By getAnchorTagLocatorByText(String anchorTagName) {
-		return By.xpath("  ");
-	}
-
-	public By getButtonLocatorsBytext(String buttonName) {
-		return By.xpath("  ");
-	}
-
+//	TC-4 Locators
 	public By calendarFromDropdown() {
-		return By.xpath("  ");
+		return null;
 	}
-
 	public By calendarToDropdown() {
-		return By.xpath("  ");
+		return null;
 	}
-
-	public By getOkButtonLocator() {
-		return By.xpath("  ");
-	}
-
 	public By searchBarId() {
-		return By.id("  ");
+		return null;
 	}
-
-	public By searchBarIdAtDoctorModule() {
-		return By.xpath("  ");
-	}
-
 	public By getDateRangeButton() {
-		return By.cssSelector("  ");
+		return null;
 	}
-
 	public By getFilterDropdownLocator() {
-		return By.xpath("  ");
+		return null;
 	}
-
 	public By getStarIconLocator() {
-		return By.xpath("  ");
+		return null;
 	}
 
+
+
+//	TC-6 Locators
+	public By getButtonLocatorsBytext(String buttonName) {
+		return null;
+	}
+//	TC-7 Locators
 	public By favouriteOrStarIcon() {
-		return By.xpath("  ");
+		return null;
 	}
-
-	public By getActionColumnButton(String patientName, String actionName) {
-		return By.xpath("  ");
-	}
-
-	public By getFilmTypeErrorMessage() {
-		return By.xpath("  ");
-	}
-
-	public By getFilmTypeInputField() {
-		return By.cssSelector("  ");
-	}
-
-	public By getQuantityInputField() {
-		return By.xpath("  ");
-	}
-
-	public By getPopUpMessageText(String msgStatus, String messageText) {
-		return By.xpath("  ");
-	}
-
-	public By getAddReportHeading() {
-		return By.xpath("  ");
-	}
-
-	public By getSaveButtonLocator() {
-		return By.cssSelector("  ");
-	}
-
-	public By getTextEditorLocator() {
-		return By.xpath("  ");
-	}
-
-	public By getBodyTextLocator() {
-		return By.cssSelector("  ");
-	}
-
-	public By popupCloseButton() {
-		return By.cssSelector("  ");
-	}
-
-	public By getImagingName() {
-		return By.xpath("  ");
-	}
-
-	public By getFirstLabIcon() {
-		return By.cssSelector("  ");
-	}
-
-	public By getOrderFilterDropdown() {
-		return By.xpath("  ");
-	}
-
-	public By getInputFieldByPlaceholder(String placeholder) {
-		return By.xpath("  ");
-	}
-
-	public By getListElementWithText(String listElementText) {
-		return By.xpath("  ");
-	}
-
-	public By getCurrentPage() {
-		return By.xpath("  ");
-	}
-
-	public By getFirstPatientName() {
-		return By.xpath("  ");
-	}
-
-	public By getOrderSection() {
-		return By.xpath("  ");
-	}
-
-	public By getSelectDateRangeDropDown() {
-		return By.xpath("  ");
-	}
-
-	public By getActualRequestedOnDates() {
-		return By.xpath("  ");
-	}
-
-	public By getImagingTypeName() {
-		return By.xpath("  ");
-	}
-
-	public By wardBillingViewDetailsbutton() {
-		return By.cssSelector("  ");
-	}
-
-	public By wardBillingModal() {
-		return By.xpath("  ");
+	
+//	TC-8 Locators
+	public By getOkButtonLocator() {
+		return null;
 	}
 
 	public radiology_page(WebDriver driver) {
