@@ -45,7 +45,7 @@ public class radiology_testcase extends AppTestBase {
 
 	@Test(priority = 1, groups = { "sanity" }, description = "1. Login in the healthapp application\r\n"
 			+ "2. Scroll down menu till radiology\r\n" + "3. Click on the radiology")
-	public void verifyRadiologyModule() throws Exception {
+	public void verifyRadiologyPageTitle()  throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
 		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
 				"radiology");
@@ -53,8 +53,8 @@ public class radiology_testcase extends AppTestBase {
 		Assert.assertTrue(radiology_pageInstance.loginToHealthAppByGivenValidCredetial(loginData),
 				"Login failed, Invalid credentials ! Please check manually");
 		radiology_pageInstance.scrollDownAndClickRadiologyTab();
-		System.out.println("Verification Page url : " + radiologyExpectedData.get("URL"));
-		Assert.assertEquals(radiology_pageInstance.verifyRadiologyPageUrl(), radiologyExpectedData.get("URL"));
+		System.out.println("Verification Page url : " + radiologyExpectedData.get("title"));
+		Assert.assertEquals(radiology_pageInstance.verifyRadiologyPageTitle(), radiologyExpectedData.get("title"));
 	}
 
 	@Test(priority = 2, groups = { "sanity" }, description = "Pre condition: User should be logged in \r\n"
@@ -62,13 +62,13 @@ public class radiology_testcase extends AppTestBase {
 	public void verifyRadiologySubModules() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
+		Assert.assertTrue(radiology_pageInstance.verifyRadiologySubModules(
 				locatorsFactoryInstance.getPageBarFixedLocator("List Requests")));
-		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
+		Assert.assertTrue(radiology_pageInstance.verifyRadiologySubModules(
 				locatorsFactoryInstance.getPageBarFixedLocator("List Reports")));
-		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
+		Assert.assertTrue(radiology_pageInstance.verifyRadiologySubModules(
 				locatorsFactoryInstance.getPageBarFixedLocator("Edit Doctors")));
-		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
+		Assert.assertTrue(radiology_pageInstance.verifyRadiologySubModules(
 				locatorsFactoryInstance.getPageBarFixedLocator("Ward Billing")));
 	}
 
@@ -93,30 +93,16 @@ public class radiology_testcase extends AppTestBase {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		String toDate = currentDate.format(formatter);
 		Thread.sleep(3000); // Waiting for data to load
-		radiology_pageInstance.applyDateFilter("01-01-2023", toDate);
-		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("OK")));
-		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("First")));
-		Assert.assertTrue(radiology_pageInstance.highlightAndVerifyWhetherElementIsDisplayed(
-				locatorsFactoryInstance.getButtonLocatorsBytext("Previous")));
-		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("Next")));
-		Assert.assertTrue(radiology_pageInstance
-				.highlightAndVerifyWhetherElementIsDisplayed(locatorsFactoryInstance.getButtonLocatorsBytext("Last")));
-		Assert.assertTrue(radiology_pageInstance.verifySearchBarIsDisplayed());
-		Assert.assertTrue(radiology_pageInstance.verifyDateRangeButtonIsDisplayed());
-		Assert.assertTrue(radiology_pageInstance.verifyFilterDropdownIsDisplayed());
-		Assert.assertTrue(radiology_pageInstance.verifyFromDateFieldIsDisplayed());
-		Assert.assertTrue(radiology_pageInstance.verifyToDateFieldIsDisplayed());
-		Assert.assertTrue(radiology_pageInstance.verifyStarIconIsDisplayed());
+		
+
+		Assert.assertTrue(radiology_pageInstance.verifyListRequestsComponents());		
 	}
 
 	@Test(priority = 5, groups = {
 			"sanity" }, description = "Pre condition: User should be logged in and it is on radiology module\r\n"
 					+ "1. Click on the list requests \r\n" + "2. Click on the edit doctors\r\n"
 					+ "3. Click on Ward Billing\r\n" + "4. Click on List Requests")
-	public void verifyNavigationToAnotherSubModuleAfterOpeningTheListRequestsSection() throws Exception {
+	public void verifySelectedTabIsActiveOrNot() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
 		Assert.assertTrue(
@@ -140,10 +126,10 @@ public class radiology_testcase extends AppTestBase {
 	@Test(priority = 6, groups = { "sanity" }, description = "Pre condition: User should be logged in\r\n"
 			+ "1.  Select \"All\" drop down option from the \"Filter\" field \r\n"
 			+ "2.  Scroll all the way to the bottom of the page")
-	public void performScrollOperation() throws Exception {
+	public void verifyNextButtonIsDisplayed() throws Exception {
 		radiology_pageInstance = new radiology_page(driver);
 
-		Assert.assertTrue(radiology_pageInstance.performScrollOperation(), "Scroll operation is performed");
+		Assert.assertTrue(radiology_pageInstance.verifyNextButtonIsDisplayed(), "Scroll operation is performed");
 		;
 	}
 
