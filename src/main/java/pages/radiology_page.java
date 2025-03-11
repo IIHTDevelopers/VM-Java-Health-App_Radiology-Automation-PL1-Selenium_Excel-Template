@@ -11,61 +11,32 @@ import org.testng.Assert;
 public class radiology_page extends StartupPage {
 
 //	TC-1 Locator
-	public By getUsernameTextfieldLocator() {
-		return null;
-	}
-	public By getPasswordTextboxLocator() {
-		return null;
-	}
-	public By getSignInButtonLocator() {
-		return null;
-	}
-	public By getRadiologyLocator() {
-		return null;
-	}
+	public By getUsernameTextfieldLocator = null;
+	public By getPasswordTextboxLocator = null;
+	public By getSignInButtonLocator = null;
+	public By getRadiologyLocator = null;
 //	TC-2 Locator
 //	Please write the locators here	
 //	TC-3 Locator
-	public By getPageBarFixedLocator(String navBarName) {
-		return null;
-	}
+	public By getPageBarFixedLocator = null;
 //	TC-4 Locators
-	public By searchBarId() {
-		return null;
-	}
-	public By getDateRangeButton() {
-		return null;
-	}
-	public By getFilterDropdownLocator() {
-		return null;
-	}
+	public By searchBarId = null;
+	public By getDateRangeButton = null;
+	public By getFilterDropdownLocator = null;
 //	TC-5 Locator
 //	Please write the locators here
 //	TC-6 Locators
-	public By getButtonLocatorsBytext(String buttonName) {
-		return null;
-	}
+	public By getButtonLocatorsBytext = null;
 //	TC-7 Locators
-	public By favouriteOrStarIcon() {
-		return null;
-	}
+	public By favouriteOrStarIcon = null;
 	
 //	TC-8 Locators
-	public By getOkButtonLocator() {
-		return null;
-	}
+	public By getOkButtonLocator = null;
+	public By calendarFromDropdown = null;
+	public By calendarToDropdown = null;	
+	public By getStarIconLocator = null;
 	
-	public By calendarFromDropdown() {
-		return null;
-	}
-	public By calendarToDropdown() {
-		return null;
-	}
 	
-	public By getStarIconLocator() {
-		return null;
-	}
-
 	public radiology_page(WebDriver driver) {
 		super(driver);
 	}
