@@ -17,20 +17,17 @@ public class radiology_page extends StartupPage {
 	public By getRadiologyLocator = null;
 //	TC-2 Locator
 //	Please write the locators here	
-//	TC-3 Locator
-	public By getPageBarFixedLocator = null;
-//	TC-4 Locators
+
+//	TC-3 Locators
 	public By searchBarId = null;
 	public By getDateRangeButton = null;
 	public By getFilterDropdownLocator = null;
-//	TC-5 Locator
+//	TC-4 Locator
 //	Please write the locators here
-//	TC-6 Locators
+//	TC-5 Locators
 	public By getButtonLocatorsBytext = null;
-//	TC-7 Locators
-	public By favouriteOrStarIcon = null;
-	
-//	TC-8 Locators
+
+//	TC-6 Locators
 	public By getOkButtonLocator = null;
 	public By calendarFromDropdown = null;
 	public By calendarToDropdown = null;	
@@ -97,25 +94,7 @@ public class radiology_page extends StartupPage {
 	}
 
 	/**
-	 * @Test3 about this method verifyUrlRadiologyModule()
-	 * 
-	 * @description This method verifies that the "List Requests" tab is present in
-	 *              the Radiology module and returns the current URL of the page.
-	 * @return String - The current URL of the page after verifying the "List
-	 *         Requests" tab.
-	 * @throws Exception - If there is an issue locating the "List Requests" tab or
-	 *                   verifying its text.
-	 * @autor YAKSHA
-	 */
-	public String verifyUrlRadiologyModule() throws Exception {
-		//Write your logic here
-				return null;
-	}
-
-
-
-	/**
-	 * @Test4 about this method verifyListRequestsComponents()
+	 * @Test3 about this method verifyListRequestsComponents()
 	 * 
 	 * @param : null
 	 * @description : This method verifies if the search bar is visible
@@ -131,7 +110,7 @@ public class radiology_page extends StartupPage {
 
 
 	/**
-	 * @Test5 about this method
+	 * @Test4 about this method
 	 * verifySelectedTabIsActiveOrNot()
 	 * 
 	 * @param : element - the locator of the tab to be verified
@@ -151,7 +130,7 @@ public class radiology_page extends StartupPage {
 	}
 
 	/**
-	 * @Test6 about this method verifyNextButtonIsDisplayed()
+	 * @Test5 about this method verifyNextButtonIsDisplayed()
 	 * @param : null
 	 * @description : Scrolls till Radiology tab, selects it, and clicks "List
 	 *              Requests" tab
@@ -165,20 +144,7 @@ public class radiology_page extends StartupPage {
 	}
 
 	/**
-	 * @Test7 about this method verifyToolTipText()
-	 * @param : null
-	 * @description : Verify the text of the tooltip
-	 * @return : String
-	 * @throws : Exception - if there is an issue finding the text
-	 * @author : YAKSHA
-	 */
-	public String verifyToolTipText() {
-		//Write your logic here
-				return null;
-	}
-
-	/**
-	 * @Test8 about this method verifyDatesAreRememberedCorrectly()
+	 * @Test6 about this method verifyDatesAreRememberedCorrectly()
 	 * 
 	 * @param fromDate - the expected "from" date in the format "dd-MM-yyyy"
 	 * 
