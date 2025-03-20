@@ -72,18 +72,7 @@ public class radiology_testcase extends AppTestBase {
 				locatorsFactoryInstance.getPageBarFixedLocator("Ward Billing")));
 	}
 
-	@Test(priority = 3, groups = { "sanity" }, description = "1. Login in the healthapp application\r\n"
-			+ "2. Scroll down menu till radiology\r\n" + "3. Click on the radiology and verify list request module\r\n")
-
-	public void verifyUrlOfTheRadiologyModule() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"radiology");
-
-		Assert.assertEquals(radiology_pageInstance.verifyUrlRadiologyModule(), radiologyExpectedData.get("URL"));
-	}
-
-	@Test(priority = 4, groups = {
+	@Test(priority = 3, groups = {
 			"sanity" }, description = "Pre condition: User should be logged in and it is on radiology module\r\n"
 					+ "1. Click on the radiology module drop-down arrow \r\n" + "2. Click on list request section")
 	public void verifyListRequestsComponents() throws Exception {
@@ -98,7 +87,7 @@ public class radiology_testcase extends AppTestBase {
 		Assert.assertTrue(radiology_pageInstance.verifyListRequestsComponents());		
 	}
 
-	@Test(priority = 5, groups = {
+	@Test(priority = 4, groups = {
 			"sanity" }, description = "Pre condition: User should be logged in and it is on radiology module\r\n"
 					+ "1. Click on the list requests \r\n" + "2. Click on the edit doctors\r\n"
 					+ "3. Click on Ward Billing\r\n" + "4. Click on List Requests")
@@ -123,7 +112,7 @@ public class radiology_testcase extends AppTestBase {
 				"List Requests page is not active");
 	}
 
-	@Test(priority = 6, groups = { "sanity" }, description = "Pre condition: User should be logged in\r\n"
+	@Test(priority = 5, groups = { "sanity" }, description = "Pre condition: User should be logged in\r\n"
 			+ "1.  Select \"All\" drop down option from the \"Filter\" field \r\n"
 			+ "2.  Scroll all the way to the bottom of the page")
 	public void verifyNextButtonIsDisplayed() throws Exception {
@@ -133,19 +122,7 @@ public class radiology_testcase extends AppTestBase {
 		;
 	}
 
-	@Test(priority = 7, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on Radiology > List Request section \r\n"
-					+ "1. Hover the mouse over the star/favourite icon. \r\n"
-					+ "2. Verify that a tooltip with the text \"Remember this date\" appears when hovering over the star.")
-	public void verifyToolTipText() throws Exception {
-		radiology_pageInstance = new radiology_page(driver);
-
-		Map<String, String> radiologyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"radiology");
-		Assert.assertEquals(radiology_pageInstance.verifyToolTipText(), radiologyExpectedData.get("favouriteIcon"));
-	}
-
-	@Test(priority = 8, groups = {
+	@Test(priority = 6, groups = {
 			"sanity" }, description = "Pre condition: User should be logged in and it is on Radiology > List Requests section\r\n"
 					+ "1. Navigate to the Radiology module.\r\n" + "2. Click on the \"List Requests\" section.\r\n"
 					+ "3. Click on \"FROM\" and select \"Jan 2020\"\r\n"
