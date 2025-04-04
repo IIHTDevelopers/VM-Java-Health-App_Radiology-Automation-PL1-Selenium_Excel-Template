@@ -11,41 +11,40 @@ import org.testng.Assert;
 public class radiology_page extends StartupPage {
 
 //	TC-1 Locator
-	public By getUsernameTextfieldLocator = null;
-	public By getPasswordTextboxLocator = null;
-	public By getSignInButtonLocator = null;
-	public By getRadiologyLocator = null;
+	By getUsernameTextfieldLocator = null;
+	By getPasswordTextboxLocator = null;
+	By getSignInButtonLocator = null;
+	By getRadiologyLocator = null;
 //	TC-2 Locator
 //	Please write the locators here	
-
 //	TC-3 Locators
-	public By searchBarId = null;
-	public By getDateRangeButton = null;
-	public By getFilterDropdownLocator = null;
+	By searchBarId = null;
+	By getDateRangeButton = null;
+	By getFilterDropdownLocator = null;
 //	TC-4 Locator
 //	Please write the locators here
 //	TC-5 Locators
 	public By getButtonLocatorsBytext = null;
+//	TC-6 Locators	
+	By getPageBarFixedLocatorListRequests = null;
+	By getPageBarFixedLocatorWardBilling = null;
+	By getOkButtonLocator = null;
+	By calendarFromDropdown = null;
+	By calendarToDropdown = null;
+	By getStarIconLocator = null;
 
-//	TC-6 Locators
-	public By getOkButtonLocator = null;
-	public By calendarFromDropdown = null;
-	public By calendarToDropdown = null;	
-	public By getStarIconLocator = null;
-	
-	
 	public radiology_page(WebDriver driver) {
 		super(driver);
 	}
 
-	/**
-	 * @Test1.1 about this method loginTohealthAppByGivenValidCredetial()
+	/**@Test 1.1
+	 * Logs in to the Health App using the provided valid credentials.
 	 * 
-	 * @param : Map<String, String>
-	 * @description : fill usernameTextbox & passwordTextbox and click on sign in
-	 *              button
-	 * @return : Boolean
-	 * @author : Yaksha
+	 * @param expectedData A map containing login credentials, where "username" and "password" are the keys.
+	 * @return true if login steps are executed successfully, false otherwise.
+	 * @throws Exception if any error occurs during the login process.
+	 * 
+	 * @author Yaksha
 	 */
 	public boolean loginToHealthAppByGivenValidCredetial(Map<String, String> expectedData) throws Exception {
 		//Write your logic here
@@ -53,29 +52,29 @@ public class radiology_page extends StartupPage {
 	}
 
 	/**
-	 * @Test1.2 about this method scrollDownAndClickRadiologyTab()
-	 * 
+	 * @Test1.2 
+	 * Scrolls down to the Radiology tab and clicks on it.
 	 * @param : null
 	 * @description : verify the radiology tab, scroll to it, and click it
-	 * @return : String
+	 * @return : null
 	 * @author : YAKSHA
+	 * @author YAKSHA
 	 */
 	public void scrollDownAndClickRadiologyTab() throws Exception {
-		//Write your logic here
+		//write your logic here
 	}
 
-	/**
-	 * @Test1.3 about this method verifyRadiologyPageUrl()
-	 * 
+	/**@Test1.3
+	 * Retrieves and returns the title of the Radiology page.
 	 * @param : null
-	 * @description : verify radiology page url
-	 * @return : String
-	 * @author : YAKSHA
+	 * @return The title of the current page as a String.
+	 * @throws Exception if any error occurs during execution.
+	 * 
+	 * @author YAKSHA
 	 */
 	public String verifyRadiologyPageTitle() throws Exception {
-		// Write your logic here
+		//write your logic here
 		return null;
-
 	}
 
 	/**
@@ -89,23 +88,23 @@ public class radiology_page extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public boolean verifyRadiologySubModules(By element) {
-		//Write your logic here
+		//write your logic here
 		return false;
 	}
 
 	/**
-	 * @Test3 about this method verifyListRequestsComponents()
-	 * 
+	 * @Test3 
+	 * Verifies the presence of key components in the list requests section.
+	 * Specifically, checks if the search bar, date range button, and filter dropdown are visible.
 	 * @param : null
-	 * @description : This method verifies if the search bar is visible
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the search bar or it is
-	 *           not visible
-	 * @author : YAKSHA
+	 * @return true if all components are visible, false otherwise.
+	 * @throws Exception if there is an issue finding any of the components.
+	 * 
+	 * @author YAKSHA
 	 */
 	public boolean verifyListRequestsComponents() {
-		//Write your logic here
-				return false;
+		//write your logic here
+		return false;
 	}
 
 
@@ -125,23 +124,24 @@ public class radiology_page extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public boolean verifySelectedTabIsActiveOrNot(By element) throws Exception {
-		//Write your logic here
+		//write your logic here
 				return false;
 	}
 
 	/**
-	 * @Test5 about this method verifyNextButtonIsDisplayed()
+	 * @Test5
+	 * Verifies if the "Next" button is displayed on the page.
 	 * @param : null
-	 * @description : Scrolls till Radiology tab, selects it, and clicks "List
-	 *              Requests" tab
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the tab
-	 * @author : YAKSHA
+	 * @return true if the "Next" button is found and visible, false otherwise.
+	 * @throws Exception if there is an issue locating the button.
+	 * 
+	 * @author YAKSHA
 	 */
 	public boolean verifyNextButtonIsDisplayed() {
-		//Write your logic here
+		//write your logic here
 				return false;
 	}
+
 
 	/**
 	 * @Test6 about this method verifyDatesAreRememberedCorrectly()
@@ -166,7 +166,7 @@ public class radiology_page extends StartupPage {
 	 * @throws Exception
 	 */
 	public boolean verifyDatesAreRememberedCorrectly(String fromDate, String toDate) throws Exception {
-		//Write your logic here
+		//write your logic here
 				return false;
 	}
 
